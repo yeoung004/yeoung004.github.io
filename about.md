@@ -1,18 +1,15 @@
 ---
-title: Colophon
+title: Choi
 permalink: /about/
 layout: page
-excerpt: Hello peeps, I'm student of computer science from Banyuwangi, living in Jogjakarta. This blog for documentation about my programming journey, running on jekyll, hosting on netlify and using my own simple theme.
+excerpt: Hello! I'm Korean I have bachelor's degree and I've studied computer science and I used to work a company for half a year as server developer Usually I used Spring Framework and Oracle SQL and now After traveled in USA I look for a server developer job (Spring Framework) but now I want to study I know I need to study about Computer Science and Computer language I really enjoy this time!
 comments: false
 ---
 
-He's a student from Banyuwangi, living in Jogjakarta. the blog for documentation about his programming 🎒 journey, running on jekyll, hosting on [now.sh](http://now.sh) and using his own theme, he name it <a href="https://github.com/piharpi/jekyll-klise" target="_blank" rel="noopener">klisé</a>, he also loves to learning web technology; but he often forgot, that a reason why him doing the writing.
+Hello! I'm Korean I have bachelor's degree and I've studied computer science and I used to work a company for half a year as server developer Usually I used Spring Framework and Oracle SQL and now After traveled in USA I look for a server developer job (Spring Framework) but now I want to study I know I need to study about Computer Science and Computer language I really enjoy this time.
+If you have a question Don't mind to send mail
 
-If you have a question about him or else, just send a letter to him.
-
-You can [report](http://github.com/piharpi/jekyll-klise/issues/new) if there is an broken link(s) or somethings else.
-
-**may u needs ✨**
+##yeoung004@gmail.com##
 
 - {{ site.author.email }}
 - github.com/{{ site.author.github }}
