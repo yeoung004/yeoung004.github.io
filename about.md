@@ -16,7 +16,7 @@ Usually I used Spring Framework and Oracle SQL
 now After traveled in USA✈ I look for a server developer job (Spring Framework) 
 If you have a question for me Don't mind to send a mail📧
 
-##yeoung004@gmail.com##
+yeoung004@gmail.com
 
 - {{ site.author.email }}
 - github.com/{{ site.author.github }}
