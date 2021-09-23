@@ -1,8 +1,8 @@
 # Site settings
 title: Gang's # site title
-description:  # site description
+description: 
    I'm from Korea and Mainly I study Spring boot framework I want to be a server developer
-   I want to get a lot of experiences about computer🖥<a href="https://github.com/yeoung004" target="_blank" rel="noopener">@github</a>.
+   I want to get a lot of experiences about computer🖥
 lang: en-US # default lang
 timezone: 
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
@@ -12,8 +12,9 @@ mode: dark # default theme "dark" | "light"
 # Profile settings
 author:
   name: Youngsung Choi # author name
-  bio: >- # tell to the world
-  username: yeoung # general username
+  bio:  I'm from Korea and Mainly I study Spring boot framework I want to be a server developer
+   I want to get a lot of experiences about computer🖥 # tell to the world
+  username: YoungSung # general username
   github: yeoung004 # github username
   email: yeoung004@gmail.com # email adress
   avatar: https://avatars.githubusercontent.com/u/67312562?v=4 # change with your own avatar
