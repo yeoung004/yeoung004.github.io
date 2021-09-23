@@ -10,7 +10,7 @@ now After traveled in USA✈ I look for a server developer job (Spring Framework
 comments: false
 ---
 
-Hello!😊 I'm Korean I have bachelor's degree and I've studied computer science🖥
+Hello!😊 I'm Korean I have a bachelor's degree and I've studied computer science🖥
 I used to work a company for half a year as server developer 
 Usually I used Spring Framework and Oracle SQL 
 now After traveled in USA✈ I look for a server developer job (Spring Framework) 
