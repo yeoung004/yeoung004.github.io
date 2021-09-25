@@ -11,8 +11,7 @@ mode: dark # default theme "dark" | "light"
 # Profile settings
 author:
   name: Youngsung Choi # author name
-  bio:  I'm from Korea and Mainly I study Spring boot framework I want to be a server developer
-   I want to get a lot of experiences about computer🖥 # tell to the world
+  bio:  Change the world with a code line🌎
   username: YoungSung # general username
   github: yeoung004 # github username
   email: yeoung004@gmail.com # email adress
