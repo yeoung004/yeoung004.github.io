@@ -6,7 +6,7 @@
 
 > 데이터를 주고 받을 때 데이터 자체의 흐름을 각 구간별로 나눠 놓은 것이다.
 
-<img src="C:\Users\Choi\AppData\Roaming\Typora\typora-user-images\image-20210927213741200.png" alt="image-20210927213741200" style="zoom:0%;" />
+<img src="C:\Users\Choi\yeoung004.github.io\_posts\Network\image-20210927213741200.png" alt="image-20210927213741200" style="zoom:0%;" />
 
 
 
@@ -14,7 +14,7 @@
 
 > 컴퓨터 끼리 정보를 주고 받을 때 사용하는 통신 규약이다.
 
-![image-20210927214948839](C:\Users\Choi\AppData\Roaming\Typora\typora-user-images\image-20210927214948839.png)
+![image-20210927214948839](C:\Users\Choi\yeoung004.github.io\_posts\Network\image-20210927214948839.png)
 
 ### 패킷(Packet)
 
@@ -33,7 +33,7 @@
 
 
 
-<img src="C:\Users\Choi\AppData\Roaming\Typora\typora-user-images\image-20210927222002231.png" alt="image-20210927222002231" style="zoom:80%;" />
+<img src="C:\Users\Choi\yeoung004.github.io\_posts\Network\image-20210927222002231.png" alt="image-20210927222002231" style="zoom:80%;" />
 
 
 
@@ -43,7 +43,7 @@
 - 16진수를 사용하며, 12개로 이루어져 있다.
 - OUI(6 Bytes) : IEEE가 부여한 제조회사 식별 ID + 고유번호(6 Bytes) : 제조사에서 부여한 고유 번호
 
-![img](https://t1.daumcdn.net/cfile/tistory/996700395E199B6B0E)
+![img](C:\Users\Choi\yeoung004.github.io\_posts\Network\996700395E199B6B0E.png)
 
 - Destination Address(6 bytes) + Source Address(6 Bytes) + Ethernet Type(2 bytes) = 14 bytes
 - Ethernet (Protocal) Type : Payload(상위 프로토콜)에 어떤 프로토콜이 들어가  있는지 알려주기 위함 
