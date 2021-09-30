@@ -6,7 +6,7 @@
 
 > 데이터를 주고 받을 때 데이터 자체의 흐름을 각 구간별로 나눠 놓은 것이다.
 
-<img src="image-20210927213741200.png" alt="image-20210927213741200" style="zoom:0%;" />
+<img src="2021-09-27-About-Network-2.assets/image-20210927213741200.png" alt="image-20210927213741200" style="zoom:0%;" />
 
 
 
