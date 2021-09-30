@@ -12,7 +12,7 @@
 
 
 
-![image-20210930232650336](2021-09-30-About-Network4-IPv4.assets/image-20210930232650336.png)
+![image-20210930232650336](https://github.com/yeoung004/yeoung004.github.io/blob/main/_posts/Network/2021-09-30-About-Network4-IPv4.assets/image-20210930232650336.png?raw=true)
 
 - Source IP, Destination IP 각각 4 Bytes씩 총 8바이트를 사용
 - IP Flags : 3 bits이며 D는 Don't fragmentation, M은 More fragementation이다 데이터를 허용 범위 내에서 보내면 아무런 오류가 없지만, 범위를 초과 했을 경우 M option을 이용해 Fragment Offset에다가 잘게 쪼갠 데이터의 위치를 알려줌
@@ -29,7 +29,7 @@
 >
 > 주로 상대방과 통신 사용 가능 유무를 확인할때 사용한다.
 
-![image-20210930234803117](image-20210930234803117.png)
+![image-20210930234803117](https://github.com/yeoung004/yeoung004.github.io/blob/main/_posts/Network/image-20210930234803117.png?raw=true)
 
 #### ICMP message types
 
