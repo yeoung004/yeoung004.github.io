@@ -67,7 +67,7 @@
 - 공인IP : 실제 네트워크에서 사용하는 주소
 - 사설IP : 같은 네트워크 대역대에서 사용하는 주소
 
-<img src="C:\Users\Choi\yeoung004.github.io\_posts\Network\image-20210928194145994.png" alt="image-20210928194145994" style="zoom:80%;" />
+<img src="https://github.com/yeoung004/yeoung004.github.io/blob/main/_posts/Network/image-20210928194145994.png?raw=true" alt="image-20210928194145994" style="zoom:80%;" />
 
 
 
@@ -89,7 +89,7 @@
 
 #### ARP
 
-<img src="https://lh3.googleusercontent.com/proxy/AW3ZKdx6Xs2ayuXZ_d4s_5VfCdL6ICR7owB3q6RoyLcvecSr-P3ep4UBhV-oIiW-aAMWHoKN43CakDIVF6o4kmnmkqIK24u4vpd2bHU" alt="The TCP/IP Guide - ARP Message Format" style="zoom:150%;" />
+<img src="https://blog.kakaocdn.net/dn/ebowy5/btqAY6Sl40m/oOfKD7rryXAjNumFuXCasK/img.png" alt="The TCP/IP Guide - ARP Message Format" style="zoom:150%;" />
 
 > 같은 네트워크 대역대에서 통신 하기 위한  IP Address를 통해서 MAC Address를 알려주는 프로토콜이다.
 
