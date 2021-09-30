@@ -22,7 +22,7 @@
 
 -  **IPv6**
 
-  <img src="https://lh3.googleusercontent.com/proxy/9xE7Im_nkcYqQbr3SbYDQewQ1q66n0Oba1vQWGUaLIX--nx55gwQlLVZES7EyjeVqSFEorP28XyIK5jJjIAUXaMJ" alt="IPv6 Packet Security | IPv6 Now" style="zoom:150%;" />
+  <img src="https://techhub.hpe.com/eginfolib/networking/docs/switches/5120si/cg/5998-8491_l3-ip-svcs_cg/content/images/image44.png" alt="IPv6 Packet Security | IPv6 Now" style="zoom:150%;" />
 
   - 16 Bytes(128 bits)
 
