@@ -2,6 +2,7 @@ _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+.ipynb
 _drafts
 klise-*.gem
 Gemfile.lock
