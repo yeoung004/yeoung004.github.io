@@ -1,4 +1,4 @@
-![nat](nat-16331574626751-16331604073543.gif)
+![nat](https://github.com/yeoung004/yeoung004.github.io/blob/main/_posts/nat-16331574626751-16331604073543.gif?raw=true)
 
 
 
@@ -102,7 +102,7 @@
 
 EC2랑 RDS를 처음 써보는 거라... AWS야 Free Tier라며....🤦‍♂️ 만원이라 다행이다...😭
 
-![image-20211002163445702](image-20211002163445702-16331602924922.png)
+![image-20211002163445702](https://github.com/yeoung004/yeoung004.github.io/blob/main/_posts/image-20211002163445702.png?raw=true)
 
 
 
