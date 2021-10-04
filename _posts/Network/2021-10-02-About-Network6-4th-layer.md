@@ -66,7 +66,7 @@
 >
 > 오류의 검사 수정이 필요 없는 프로그램에 주로 사용된다.
 
-![image-20211002192444851](image-20211002192444851.png)
+![image-20211002192444851](https://github.com/yeoung004/yeoung004.github.io/blob/main/_posts/Network/image-20211002192444851.png?raw=true)
 
 - DNS서버에서 사용됨(도메인 -> IP)
 - TFTP 서버
@@ -81,7 +81,7 @@
 >
 > TCP는 UDP와 다르게 안정성, 신뢰성을 중요시 하기 때문에, 전송속도는 느리다.
 
-![image-20211002194254429](image-20211002194254429.png)
+![image-20211002194254429](https://github.com/yeoung004/yeoung004.github.io/blob/main/_posts/Network/image-20211002194254429.png?raw=true)
 
 - Offset : Header 길이
 - Window : 송신할 데이터의 크기를 요청
