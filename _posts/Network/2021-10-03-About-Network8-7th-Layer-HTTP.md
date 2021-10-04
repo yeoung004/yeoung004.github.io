@@ -35,7 +35,7 @@
 
 - (  **요청타입**	|	공백	|	**URI**	|	공백	|	**HTTP버전**	)
 
-![image-20211003220511916](image-20211003220511916.png)
+![image-20211003220511916.png](https://github.com/yeoung004/yeoung004.github.io/blob/main/_posts/Network/image-20211003220511916.png?raw=true)
 
 - GET은 데이터를 요청 할 때 데이터를 전송하면서 요청 할 수 있음
   - URI로 (?뒤에 쿼리로 요청)
@@ -69,7 +69,7 @@
 
 -  (	**HTTP버전**	|	공백	|	**상태코드**	|	공백	|	**상태문구**	)
 
-![image-20211003223339695](image-20211003223339695.png)
+![image-20211003223339695.png](https://github.com/yeoung004/yeoung004.github.io/blob/main/_posts/Network/image-20211003223339695.png?raw=true)
 
 - 200번 대: 정상적인 상태
   - 200 : 정상
