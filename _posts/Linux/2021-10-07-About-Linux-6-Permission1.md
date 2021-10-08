@@ -1,4 +1,4 @@
-# LINUX
+## LINUX
 
 
 
@@ -22,13 +22,13 @@
 
 
 
-### 심볼릭 모드
+#### 심볼릭 모드
 
 ![Linux Part 5. 리눅스의 권한 (특수 권한) : 네이버 블로그](https://mblogthumb-phinf.pstatic.net/MjAyMDAxMTVfMTIx/MDAxNTc5MDQ5MjgxNDEy.BxtkqSbHMdaKnYaBSUl86vR18HPIr_6a3ym72VUvd3Mg.4AMs47VpmeJWHNuTK6HoHdnL72h9WrIlzihvA3YMQpQg.PNG.hyun0524e/%EA%B6%8C%ED%95%9C_%EC%84%A4%EC%A0%95%EC%9D%98_%EC%8B%AC%EB%B3%BC%EB%A6%AD_%EB%AA%A8%EB%93%9C.PNG?type=w800)
 
 
 
-### 옥텟모드
+#### 옥텟모드
 
 ![Linux Part 4. 리눅스의 권한 (특수 권한)](https://t1.daumcdn.net/cfile/tistory/99C662335EB173002F)
 
