@@ -16,7 +16,7 @@
 
 ### 왜 OOP일까?
 
-![image-20211010195437211](image-20211010195437211.png)
+![image-20211010195437211](https://github.com/yeoung004/yeoung004.github.io/blob/main/_posts/Clean_Code/image-20211010195437211.png?raw=true)
 
 데이터가 한곳에 모여져있는, 결합도가 낮고 응집도가 높은 코드이다. (설계X)
 
@@ -26,7 +26,7 @@
 
 
 
-![image-20211010195639629](image-20211010195639629.png)
+![image-20211010195639629](https://github.com/yeoung004/yeoung004.github.io/blob/main/_posts/Clean_Code/image-20211010195639629.png?raw=true)
 
 각 객체마다 의존성 즉 다른 객체에 대해서 존재도 모르게 코드를 짜게 될 경우 수정이 필요하거나 추가가 필요할 경우 소스를 전체적으로 수정해야하는 기족의 방식과는 다르게 필요한 부분만 수정이 가능하다.
 
@@ -53,7 +53,7 @@
    2. 시퀀스 다이어그램
    3. 동적 설계
 
-![image-20211009204934803](image-20211009204934803.png)
+![image-20211009204934803](https://github.com/yeoung004/yeoung004.github.io/blob/main/_posts/Clean_Code/image-20211009204934803.png?raw=true)
 
 위 그림처럼 FlowController에 모든 역활을 집어 넣지 않고 모두 각 역활마다 클래스를 만든다.
 
@@ -101,7 +101,7 @@ if(member.isExpired()){...}
 
 ### Polymorphism(다형성)
 
-![image-20211010211834663](image-20211010211834663.png)
+![image-20211010211834663](https://github.com/yeoung004/yeoung004.github.io/blob/main/_posts/Clean_Code/image-20211010211834663.png?raw=true)
 
 > 한 객체는 여러가지(poly) 모습(morph)을 가질 수 있다.
 >
@@ -118,7 +118,7 @@ Zetmotorcycle 객체는 Motorcycle, ZetEngine 클래스 어느 모습이든지 �
 
 재사용이라는 것은 새로운 기능을 추가 할 때 기존에 짜놓은 로직이 새로운 기능으로 인해 구현체에서는 변경이 돼도, 변경이 되어서는 안된다.
 
-![image-20211010213324289](image-20211010213324289.png)
+![image-20211010213324289](https://github.com/yeoung004/yeoung004.github.io/blob/main/_posts/Clean_Code/image-20211010213324289.png?raw=true)
 
 어느 객체에서든지 Interface의 로직은 그대로 사용할 수 있어야한다.
 
