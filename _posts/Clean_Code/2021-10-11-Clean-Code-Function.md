@@ -57,7 +57,7 @@
 
    이렇게 되면 가독성도 좋아지고 파라미터값이 정확히 어떤건지 알기도 쉽다.
 
-```Java
+```java
 package function_structure;
 
 public class NutritionFacts {
@@ -128,7 +128,7 @@ public class NutritionFactsTest {
 
 여기서 Java Bean Pattern을 사용해서 해결할 수 있다.
 
-```
+```java
 package function_structure;
 
 public class NutritionFacts {
@@ -194,7 +194,7 @@ public class NutritionFacts {
 
 이렇게 만들면
 
-```
+```java
 package function_structure;
 
 import org.junit.Test;

@@ -269,7 +269,7 @@ public class Time {
 
 위 코드는 객체지향적인 설계로 만들어진 경과시간 구하는 프로그램이다. 초 데이터를 전달해주는 Time이라는 클래스를 따로 뺐다.
 
-```
+```java
 package objective;
 
 import org.junit.Assert;
@@ -302,7 +302,7 @@ public class ObjectiveStopWatchTest {
 }
 ```
 
-```
+```java
 package objective;
 
 public class Time {
