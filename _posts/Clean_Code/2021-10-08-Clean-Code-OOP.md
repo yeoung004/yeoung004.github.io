@@ -2,7 +2,7 @@
 
 
 
-# 클린코드
+# OOP
 
 > 코드 1개의 라인을 고치면 3개의 버그가 발생한다.
 >
@@ -63,6 +63,8 @@
 
 
 
+
+
 ### Encapsulation(캡슐화)
 
 객체지향에서 대표적인 특성중에 하나인 캡슐화는 내부적으로 어떻게 구현했는지를 감춰서 내부의 변경(데이터, 코드)이 Client가 변경 되지 않도록한다.
@@ -85,6 +87,247 @@ if(member.isExpired()){...}
 
 
 
+#### 예시
+
+```java
+package procedural;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class ProceduralStopWatchTest {
+    private long expectedElapsedTime = 100l;
+
+    @Test
+    public void
+    should_return_elapsed_milli_second() {
+        ProceduralStopWatch stopWatch = new ProceduralStopWatch();
+
+        stopWatch.startTime = System.currentTimeMillis(); // start time in millis
+
+        doSomething();
+
+        stopWatch.stopTime = System.currentTimeMillis(); // stop time in millis
+
+        long elapsedTime = stopWatch.getElapsedTime();
+
+        Assert.assertEquals(elapsedTime, expectedElapsedTime);
+    }
+
+    private void doSomething() {
+        try {
+            Thread.sleep(expectedElapsedTime);
+        } catch (InterruptedException e) {
+        }
+    }
+}
+```
+
+```java
+package procedural;
+
+public class ProceduralStopWatch {
+    public long startTime;
+    public long stopTime;
+
+    public long getElapsedTime() {
+        return stopTime - startTime;
+    }
+}
+```
+
+위 코드는 시작 시간부터 경과된 시간을 구하는 절차지향적인 프로그램이다.
+
+여기서 나노세컨드를 추가해달라는 요구사항이 들어왔다. 개발자는 이 절차지향적인 코드에서 기능을 추가를 해야한다.
+
+```java
+package procedural;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class ProceduralStopWatchTest {
+    private long expectedElapsedTime = 100l;
+
+    @Test
+    public void
+    should_return_elapsed_nano_seconds() {
+        ProceduralStopWatch stopWatch = new ProceduralStopWatch();
+
+        stopWatch.startNanoTime = System.nanoTime(); // start time in nanos
+
+        doSomething();
+
+        stopWatch.stopNanoTime = System.nanoTime(); // stop time in nanos
+
+        long elapsedTime = stopWatch.getElapsedNanoTime();
+
+        Assert.assertEquals(elapsedTime, expectedElapsedTime);
+    }
+
+    private void doSomething() {
+        try {
+            Thread.sleep(expectedElapsedTime);
+        } catch (InterruptedException e) {
+        }
+    }
+}
+```
+
+```java
+package procedural;
+
+public class ProceduralStopWatch {
+    public long startTime;
+    public long stopTime;
+    public long startNanoTime;
+    public long stopNanoTime;
+
+    public long getElapsedTime() {
+        return stopTime - startTime;
+    }
+
+    public long getElapsedNanoTime() {
+        return stopNanoTime - startNanoTime;
+    }
+}
+```
+
+우리가 새로운 프로그램 코드에서 봐야할 부분은 절차지향에서 새로운 요구사항이 생기면, 개발자는 프로그램을 요구사항에 맞게 재수정한다. 이렇게 되면 기존에 있던 프로그램은 사라지고 새로운 프로그램이 생겼다.  요구사항에 맞게 프로그램을 재사용 않고 프로그램을 새로 만들게 되는 것이다.
+
+
+
+```java
+package objective;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class ObjectiveStopWatchTest {
+    private long expectedElapsedTime = 100l;
+
+    @Test
+    public void
+    should_return_elapsed_millis() {
+        ObjectiveStopWatch stopWatch = new ObjectiveStopWatch();
+        stopWatch.start();
+
+        doSomething();
+
+        stopWatch.stop();
+
+        Time time = stopWatch.getElapseTime();
+
+        Assert.assertEquals(time.getMilliTime(), expectedElapsedTime);
+    }
+
+    private void doSomething() {
+        try {
+            Thread.sleep(expectedElapsedTime);
+        } catch (InterruptedException e) {
+        }
+    }
+}
+```
+
+```java
+package objective;
+
+public class ObjectiveStopWatch {
+    private long startTime;
+    private long stopTime;
+
+    public void start() {
+        startTime = System.nanoTime();
+    }
+
+    public void stop() {
+        stopTime = System.nanoTime();
+    }
+
+    public Time getElapseTime() {
+        return new Time(stopTime - startTime);
+    }
+}
+```
+
+```java
+package objective;
+
+public class Time {
+    private long nano;
+
+    public Time(long nano) {
+        this.nano = nano;
+    }
+
+    public long getMilliTime() {
+        return (long) (nano / Math.pow(10, 6));
+    }
+}
+```
+
+위 코드는 객체지향적인 설계로 만들어진 경과시간 구하는 프로그램이다. 초 데이터를 전달해주는 Time이라는 클래스를 따로 뺐다.
+
+```
+package objective;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class ObjectiveStopWatchTest {
+    private long expectedElapsedTime = 100l;
+
+    @Test
+    public void
+    should_return_elapsed_millis() {
+        ObjectiveStopWatch stopWatch = new ObjectiveStopWatch();
+        stopWatch.start();
+
+        doSomething();
+
+        stopWatch.stop();
+
+        Time time = stopWatch.getElapseTime();
+
+        Assert.assertEquals(time.getNanoTime(), expectedElapsedTime);
+    }
+
+    private void doSomething() {
+        try {
+            Thread.sleep(expectedElapsedTime);
+        } catch (InterruptedException e) {
+        }
+    }
+}
+```
+
+```
+package objective;
+
+public class Time {
+    private long nano;
+
+    public Time(long nano) {
+        this.nano = nano;
+    }
+
+    public long getMilliTime() {
+        return (long) (nano / Math.pow(10, 6));
+    }
+
+    public long getNanoTime() {
+        return nano;
+    }
+}
+```
+
+기존 코드에서 나노세컨드 단위로 경과된 시간을 볼 수있는 기능을 추가했다. 절차지향에서는 나노세컨드를 받는 변수도 새로 추가하고, 이에 맞는 함수도 새로 만들고, 나노세컨드에 맞게 테스트 프로그램코드도 수정해야 했다. 예시는 아주 간단한 프로그램이였지만, 규모가 크거나, 복잡한 프로그램일 경우에는 한, 두줄이 아니라 전반적인 부분을 고치고, 많은 버그를 잡느라 시간을 허비해야한다.
+
+
+
+
+
 ### 객체 / 클래스
 
 좋은 코드는 각 역활에 맞게 알맞은 이름과 이름에 맞는 기능이다.
@@ -96,6 +339,10 @@ if(member.isExpired()){...}
 - Object
 - Role
 - Responsibility
+
+
+
+
 
 
 
@@ -125,6 +372,88 @@ Zetmotorcycle 객체는 Motorcycle, ZetEngine 클래스 어느 모습이든지 �
 > 개발자는 상세한 기능 구현에 빠지다 보면 상위 수준에서의 설계를 놓치기 쉽지만, 추상화를 통해서 상위 수준에서의 설계를 하는데 도움을 얻을 수 있다.
 
 
+
+
+
+
+
+### Abstract(상속)
+
+> 상속을 받아서 사용하고 있는 다수의 서브 클래스가 있다고 가정하자, 만약 수퍼 클래스에서 변경이 일어날 경우 수퍼 클래스에서 상속받은 다수의 서브 클래스에 큰 영향을 미친다.
+>
+> 자바에서는 다중 상속 기능을 제공하지 않기 때문에 수퍼 클래스에 있는 수많은 기능 중에서 단 1가지만 사용 할 수 있다. 선택지는 1가지 기능만 상속을 받고 다른 한개는 구현하는 수밖에 없다. 위 상황에서의 문제점은 이미 만들어놓은 클래스를 사용하지 못하고 새로 만들었기 때문에 클래스의 개수가 불필요하게 늘어난다.
+
+```java
+package inheritance;
+
+import java.util.ArrayList;
+
+public class LuggageCompartment extends ArrayList<Luggage> {
+    private int restSpace;
+
+    public LuggageCompartment(int restSpace) {
+        this.restSpace = restSpace;
+    }
+
+    @Override
+    public boolean add(Luggage luggage) {
+        this.restSpace -= luggage.getSize();
+        super.add(luggage);
+        return false;
+    }
+
+    public boolean canContain(Luggage luggage) {
+        return this.restSpace > luggage.getSize();
+    }
+
+    public void extract(Luggage luggage) {
+        this.restSpace += luggage.getSize();
+        super.remove(luggage);
+    }
+
+}
+```
+
+위 프로그램은 수화물을 적재할 때 여유공간을 알려주는 프로그램이다.
+
+개발자의 의도는 수화물을 적재하면, 여유공간은 줄어들고 출하하면, 여유공간의 크기를 늘리는 식이다.
+
+```java
+package inheritance;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+public class LuggageCompartmentTest {
+    private LuggageCompartment lc;
+
+    @Before
+    public void setUp() {
+        lc = new LuggageCompartment(11);
+    }
+
+    @Test
+    public void
+    should_update_restSpace() {
+        Luggage luggage = new Luggage(11, 10);
+
+        if(lc.canContain(luggage)) {
+            lc.add(luggage);
+            Assert.assertEquals(lc.canContain(luggage), false);
+        }
+
+        lc.remove(luggage);
+        Assert.assertEquals(lc.canContain(luggage), true);
+    }
+}
+```
+
+하지만, 위 개발자의 의도와는 다르게, extract함수를 사용지 않고 ArrayList 클래스에 있는 remove함수에 바로 접근하여 출하를 하는 바람에 비지니스 로직이 깨져버리는 상황이 발생한다.
+
+간단한 해결 책은 ArrayList를 상속 받지 않고, 함수를 만들면 사용자는 ArrayList remove함수를 접근하지 못한다.
+
+이런식으로 무조건 상속을 쓰면 좋은 것이 아닌 composition을 먼저하고 delegation을 하는 형식의 프로그램을 짜면 유연성이 증대 되기 때문에 유지보수에 적합한 프로그램이 된다.
 
 
 
