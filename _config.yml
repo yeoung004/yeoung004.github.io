@@ -32,6 +32,9 @@ analytics:
     measurement_id  : "G-4G8RFCSKMF"
     anonymize_ip    :
 
+#category
+category_dir: category/
+tag_dir: tag/
 
 # Collection setting
 collections:
