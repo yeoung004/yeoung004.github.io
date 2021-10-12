@@ -21,8 +21,17 @@ author:
 url: "https://yeoung004.github.io/" #
 baseurl:
 permalink: /:title/
-google_analytics: # leave it blank if not wish
+google_analytics:
 fb_appid:
+
+# Analytics
+analytics:
+  provider          : "google-gtage"
+  google:
+    tracking        : 
+    measurement_id  : "G-4G8RFCSKMF"
+    anonymize_ip    :
+
 
 # Collection setting
 collections:
