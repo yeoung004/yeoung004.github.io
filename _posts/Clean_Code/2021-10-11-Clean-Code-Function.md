@@ -293,6 +293,146 @@ switch문의 문제점은 case문에서 변경이 일어나면 switch를 수정�
 
 
 
+### 4.Temporal Coupling
+
+함수들이 순서를 지키며 호출되어야한다.
+
+예시를 들면,
+
+```java
+//file should be opend before processing
+fileCommand.process(file);
+//file should be closed after processing
+```
+
+이런식으로 파일을 처리하기 전에 파일은 열려있어야 하고, 파일을 처리한 후에 파일이 닫혀 있어햐한다.
+
+만약, 사용자가 이런형식을 지키지 않고 실행할 경우 에러는 날수 밖에 없다.
+
+
+
+```java
+fileCommandTemplate.process(myfile, new FileCommand() {
+    public void process(File f) {
+        // file processing codes here
+    }
+});
+
+class FileCommandTemplate{
+    public void process(File file, FileComand command) {
+        file.open();
+        command.process(file);
+        file.close();
+    }
+}
+```
+
+개발자는 이런식으로 실행하는 부분이 복잡하면 따로 빼거나 해서 사용자가 에러를 낼수 있는 여지를 제거한다.
+
+
+
+### 5.CQS
+
+Command(명령)함수와 Query(질의)함수를 각각 함수명대로 동작, 기능 해야한다. 만일 Query함수인데, 내부의 데이터를 조작하거나, Command함수인데 return값이 있거나하면, 개발자에 대한 신뢰가 떨어져서 코드를 읽을 때 내용을 전부 봐야되는 경우가 발생한다.
+
+
+
+가장 이상적인 Side effect(예상외의 반응)관리 방법
+
+1. 상태를 변경하는 삼수는 값을 반환하면 안됨
+2. 값을 반환하는 함수는 상태를 변경하면 안됨
+
+- Command
+  - 시스템의 상태 변경 가능
+  - return값 X
+  - side effect를 가지고 있음(변화)
+- Query
+  - 계산값이나, 상태를 반환
+  - side effect가 없음
+
+```java
+User u = authorizer.login(userName, password);
+```
+
+로그인을 할 때마다 값을 반환 받는다. 로그인한 유저 정보를 받고 싶지 않는데도 받아야한다.
+
+```java
+authorizer.login(userName, password);
+User u = authorizer.getUser(userName);
+```
+
+이런식으로 사용자가 예상 가능한 코드를 짜야 다른 동료 개발자나, 독자에게 개발자에 대한 신뢰성 생긴다.
+
+
+
+### 6.Tell, Don't ask
+
+함수를 만들 때 중요한것 중 하나가 말하는 것이다.
+
+무언가에게 물어보게 되면, 함수는 엮은 그물이나, 체인같은 구조가 된다.
+
+```java
+o.getX()
+    .getY()
+	    .getZ()
+    		.doSomething();
+```
+
+이러식으로...
+
+어떤 사람이 봐도 이런것은 이해하기 힘들고, 결국 의존성만 높아지게 된다.
+
+```java
+o.doSomething();
+```
+
+이렇게 바꿔서 doSomething이 다른 함수를 또 부르는 식으로 처리를 해야한다.
+
+
+
+### 7.Law of Demeter
+
+위의 사태를 방지하기 위해 Tell, Don't ask의 몇가지 규칙이 있다.
+
+객체는 아래의 메소드만 호출할 수 있다.
+
+- 인자로 전달된 객체
+- localy 생성한 객체
+- 필드로 선언된 객체
+- 전역 객체
+
+위 규칙을 잘 지키면, 코드의 가독성을 높아지고 복잡한 의존성은 끊어 질수 밖에 없다.
+
+객체는 최종 목적지까지 알필요 없이 최종 목적지까지 가는 과정중 다음 목적지만 알면 테스트코드를 짜는 것도 간단해 진다.
+
+
+
+### 8.early returns
+
+```java
+private boolean nameIsValxxxx () {
+    if(name.euqls(""))
+        return true;
+    if(!wikiWordWidget.xxx)
+        return true;
+    return false;
+}
+```
+
+early return이나, guarded return은 허용되만 가급적 읽기 쉬운 코드를 만들기 위해서는 무엇이 독자에게 더 나은 코드인지를 생각하며 짜야한다.
+
+하지만 early return이 문제인 것은 loop에서 발생한다.
+
+loop에서 return이 발생할 경우 독자도 읽기 어려워지고 테스트도 하기 어려워 진다. **동작 < 이해**
+
+
+
+
+
+## 약어
+
+- CQS : Command Query Separation
+
 
 
 ## 참조
