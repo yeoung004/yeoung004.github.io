@@ -87,7 +87,7 @@
 
 그렇다고 getter를 사용하지 않을 수는 없기에, 추상화 개념을 사용하는 것이다.
 
-![image-20211015224622509](image-20211015224622509.png)
+![image-20211015224622509](https://github.com/yeoung004/yeoung004.github.io/blob/main/_posts/Clean_Code/image-20211015224622509.png?raw=true)
 
 gallonsOfGas변수를 getPercentFuelRemaining()함수가 접근하지만 사용자의 입장에서는 알수가 없다. 이것이 다형성을 지원하는 좋은 코드이다.
 
