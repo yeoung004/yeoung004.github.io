@@ -214,7 +214,7 @@ setTimeout(() => console.log(2), 1000);
 console.log(3);
 ```
 
-![image-20211021235008706](image-20211021235008706.png)
+![image-20211021235008706](https://github.com/yeoung004/yeoung004.github.io/blob/main/_posts/JavaScript/image-20211021235008706.png?raw=true)
 
 javascript는 stack에서 함수를 호출한다. 만약 setTimeout같은 API를 호출 할 경우 webAPI에 무조건 가게 되어서 Message Queue를 거처 stack에 다시 가게 되는데 stack이 비어있어야 출력을 할 수 있다.
 
