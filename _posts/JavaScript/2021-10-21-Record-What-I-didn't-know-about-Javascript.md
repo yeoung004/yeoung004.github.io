@@ -202,7 +202,7 @@ const log = function () {
 }
 ```
 
-var타입 변수, **function declaration**을 선언, 할당 전에 호출해도 실행이 가능한데 javascript가 앞에서 말한 두가지를 가장 위에 자동으로 올려준다.
+var타입 변수, **function**을 선언, 할당 전에 호출해도 실행이 가능한데 javascript가 앞에서 말한 두가지를 가장 위에 자동으로 올려준다.
 
 
 
@@ -222,9 +222,33 @@ javascript는 stack에서 함수를 호출한다. 만약 setTimeout같은 API를
 
 
 
+### ??/|| 연산자
+
+#### ??
+
+```javascript
+function printMessage(text) {
+	console.log(text ?? "Nothing to display");
+}
+
+printMessage("text");
+printMessage(null);
+printMessage(undefined);
+
+< text
+<"Nothing to display"
+<"Nothing to display"
+```
+
+Nullish coalescing 연산자는 연산자 기준 왼쪽의 문자열이 null, undefined일 경우 왼쪽의 문자열을 대신 반환
 
 
 
+#### ||
+
+Logical Or 연산자는 연산자 기준 왼쪽의 문자열이 NaN, -1, 0, false, undefined, null값 일경우에 오른쪽 문자열을 반환
+
+default parameter와 다른점은 undefined일 경우에만 입력해논 default값이 출력됨
 
 
 

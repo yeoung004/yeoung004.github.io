@@ -1,0 +1,19 @@
+# 2022.02.08 알고리즘
+### 2839	설탕 배달
+
+N = int(input())
+rest = N % 5
+quo = (N - rest) // 5
+
+if N == 4 or N == 7:
+    print(-1)
+elif rest == 0:
+    print(N // 5)
+else:    
+    while True:
+        if rest % 3 == 0:
+            print(quo + (rest // 3))
+            break
+        else:
+            rest += 5
+            quo -= 1
