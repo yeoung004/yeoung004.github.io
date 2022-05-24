@@ -7,7 +7,7 @@ timezone:
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
 repo: https://github.com/yeoung004 # site repo [optional]
 mode: light # default theme "dark" | "light"
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+# remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
 # Profile settings
 author:
@@ -71,7 +71,7 @@ jekyll_compose:
 number_of_posts: 5
 
 # Build settings
-theme: minimal-mistakes-jekyll
+# theme: minimal-mistakes-jekyll
 sass:
   style: compressed
 
