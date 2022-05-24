@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, let,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+      display: block;
+    }
+    html {
+      width: 100%;
+      height: 100%;
+      scroll-behavior: smooth;
+    }
+    body {
+      line-height: 1;
+      width: 100%;
+      height: 100%;
+    }
+    ol, ul {
+      list-style: none;
+    }
+    blockquote, q {
+      quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+      content: '';
+      content: none;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+    body, html {
+      height: 100%;
+      width: 100%;
+    }
+    a {
+      font-family: Aldrich;
+      color: white;
+      font-size: 1vw;
+    }
+    .wrap {
+      height: 100%;
+      width: 100%;
+    }
+    .container {
+      display: flex;
+      height: 100%;
+      width: 100%;
+    }
+    .first {
+      overflow: hidden;
+    }
+    .contentLeft {
+      width: 40%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #E7E7E7;
+    }
+    .hello {
+      float: right;
+      margin-right: 1vw;
+      text-shadow: 0px 0.5vw 1vw #3d3b3b;
+    }
+    .background{
+      position: relative;
+    }
+    .contentRight {
+      width: 60%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #282828;
+    }
+    .world {
+      float: left;
+      color: #d4d4d4;
+      text-shadow: 0px 0.5vw 1vw black;
+    }
+    .title {
+      position: relative;
+      top: 5vw;
+      font-size: 4vw;
+      font-family: 'Aldrich';
+    }
+    .circle {
+      border-radius: 10vw;
+      width: 16vw;
+      height: 16vw;
+      position: relative;
+    }
+    .circle1{
+      bottom: -40vh;
+      left: 32.5vw;
+      background: #282828;
+    }
+    .circle2{
+      bottom: -40vh;
+      left: -7.5vw;
+      background: #E7E7E7;
+    }
+    .back{
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .back1 {
+      background-image: url('./asset/left.png');
+      background-position-x: -8vw;
+      background-position-y: -25vh;
+    }
+    .back2 {
+      background-image: url('./asset/right.png');
+      background-position-x: 65vw;
+      background-position-y: 15vh;
+    }
+    .intro {
+      text-align: center;
+      z-index: 999;
+      position: absolute;
+      bottom: 20vh;
+      left: 50vw;
+    }
+    .im {
+      text-align: center;
+      z-index: 9;
+      position: absolute;
+      bottom: 20vh;
+      left: 25vw;
+    }
+    .intro-txt {
+      font-size: 5vw;
+      font-family: 'Aldrich';
+    }
+    .me {
+      position: absolute;
+      left: 25vw;
+      bottom: 0vh;
+      height: 80%;
+      z-index: 999;
+    }
+    .move-circle{
+      box-shadow: 0px 0.5vw 1vw #3d3b3b;
+      border-radius: 10vw;
+      width: 13vw;
+      height: 13vw;
+      left: 0vw;
+      bottom: 10vw;
+      position: relative;
+    }
+    .move-white-circle {
+      animation: movingLeft 5s ease-in-out infinite reverse;
+      background: #929292;
+    }
+    .move-black-circle {
+      animation: movingRight 5s ease-in-out infinite reverse;
+      background: #3d3b3b;
+    }
+    .young {
+      color: white;
+      animation: text1 5s linear forwards infinite;
+
+    }
+    .soung {
+      color: #AEAEAE;
+      animation: text2 5s linear forwards infinite;
+    }
+    .choi {
+      color: #656565;
+      animation: text3 5s linear forwards infinite;
+    }
+    @keyframes text1 {
+      0% {
+        color: white;
+      }
+      50% {
+        color: #AEAEAE;
+      }
+      75% {
+        color: #656565;
+      }
+      100%{
+        color: white;
+      }
+    }
+    @keyframes text2 {
+      0% {
+        color: #AEAEAE;
+      }
+      50% {
+        color: #656565;
+      }
+      75% {
+        color: white;
+      }
+      100%{
+        color: #AEAEAE;
+      }
+    }
+    @keyframes text3 {
+      0% {
+        color: #656565;
+      }
+      50% {
+        color: white;
+      }
+      75% {
+        color: #AEAEAE;
+      }
+      100%{
+        color: #656565;
+      }
+    }
+    @keyframes movingRight {
+      0% {
+        width: 3vw;
+        height: 3vw;
+        transform: translateX(17vw) translateY(30vw) rotate(10deg)
+      }
+      50% {
+        width: 13vw;
+        height: 13vw;
+        transform: translateX(47vw) translateY(9vw) rotate(50deg)
+      }
+      100% {
+        width: 3vw;
+        height: 3vw;
+        transform: translateX(17vw) translateY(30vw) rotate(10deg)
+      }
+    }
+    @keyframes movingLeft {
+      0% {
+        width: 3vw;
+        height: 3vw;
+        transform: translateX(-39vw) translateY(36vw) rotate(10deg)
+      }
+      50% {
+        width: 13vw;
+        height: 13vw;
+        transform: translateX(17vw) translateY(5vw) rotate(50deg)
+      }
+      100% {
+        width: 3vw;
+        height: 3vw;
+        transform: translateX(-39vw) translateY(36vw) rotate(10deg)
+      }
+    }
+    .second {
+      overflow: hidden;
+    }
+    .info{
+      font-family: Aldrich;
+      color: #d4d4d4;
+      margin-left: 15vw;
+      font-size: 1.9vw;
+    }
+    .info-header {
+      font-size: 1.4vw;
+    }
+    .info-detail {
+      font-size: 1vw;
+    }
+    .col {
+      padding: 20px;
+    }
+    .bogo {
+      position: relative;
+      height: 20vw;
+      top: 5vw;
+      left: -1vw;
+    }
+    .project-detail{
+      color: #d4d4d4;
+      display: flex;
+      position: relative;
+      top: -5vw;
+      font-family: Aldrich;
+      margin-left: 13vw;
+    }
+    .project-detail-title {
+      font-size: 1.9vw;
+      display: block;
+      margin-bottom: 1vw;
+    }
+    .project-detail-content {
+      font-size: 0.9vw;
+      line-height: 1vw;
+    }
+    .project-detail-left {
+      margin-left:10vw;
+    }
+    .project-skill {
+      margin-top: 4vw;
+    }
+    .project-skill-title {
+      font-size: 1.4vw;
+    }
+    .weather {
+      position: relative;
+      height: 30vw;
+      top: 5vw;
+      left: -1vw;
+    }
+    .assembleSkill {
+      display: flex;
+      margin-top: 2vw;
+      line-height: 1.3vw;
+    }
+    .assembleSkill-col {
+      margin-right: 10vw;
+    }
+    .assembleTitle {
+      font-size: 1.5vw;
+    }
+    .assembleContent {
+      position: relative;
+      font-size: 1vw;
+      left: 1vw;
+      margin-bottom: 1vw;
+    }
+  </style>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome!</title>
+</head>
+<body>
+  <div class="wrap">
+    <div class="back1 back"></div>
+    <div class="back2 back"></div>
+    
+    <span class="container first">
+      <div class="contentLeft">
+        <div class="title hello">Hello</div>
+        <div class="im intro-txt">I'm</div>
+        <div class="circle1 circle"></div>
+        <div class="move-circle move-black-circle"></div>
+      </div>
+      <div class="contentRight">
+        <div class="title world">World!</div>
+        <div class="intro">
+          <div class="intro-txt young">Young</div>
+          <div class="intro-txt soung">Soung</div>
+          <div class="intro-txt choi">Choi</div>
+        </div>
+        <div class="circle2 circle"></div>
+        <div class="move-circle move-white-circle"></div>
+      </div>
+      <img class="me" src="./asset/1622151011298-removebg-preview.png">
+    </span>
+
+    <div class="container">
+      <div class="contentLeft">
+        <div class="title hello">Hello</div>
+        <div class="circle1 circle"></div>
+      </div>
+      <div class="contentRight">
+        <div class="title world">World!</div>
+        <div class="circle2 circle"></div>
+
+        <table class="info">
+          <tr class="info-header" align="left">
+            <th class="col">PLACE</th>
+            <th class="col">FROM</th>
+            <th class="col">TO</th>
+          </tr>
+          <tr>
+            <td class="col">
+              Seoyeong College<br>
+              <p class="info-detail">Dept. Computer Information</p>
+            </td>
+            <td class="col">2013.02</td>
+            <td class="col">2015.02</td>
+          </tr>
+          <tr>
+            <td class="col">
+              Chosen University<br>
+              <p class="info-detail">Dept. Computer Science</p>
+            </td>
+            <td class="col">2015.02</td>
+            <td class="col">2018.02</td>
+          </tr>
+          <tr>
+            <td class="col">
+              Navy<br>
+              <p class="info-detail">Military duty</p>
+            </td>
+            <td class="col">2018.07</td>
+            <td class="col">2020.05</td>
+          </tr>
+          <tr>
+            <td class="col">
+              Comin Compay<br>
+              <p class="info-detail">
+                Full-Stack Developer<br>
+                Rebuild educational administration system website<br>
+                for every Education University in Korea<br><br>
+                Back-End Jave Spring/Linux/Tomcat<br>
+                Front-End JS(JQuery)/HTML/CSS
+              </p>
+            </td>
+            <td class="col">2020.11</td>
+            <td class="col">2021.05</td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="contentLeft">
+        <div class="title hello">Hello</div>
+        <div class="circle1 circle"></div>
+      </div>
+      <div class="contentRight">
+        <div class="title world">World!</div>
+        <div class="circle2 circle"></div>
+        <div class="project-detail">
+          <div class="project-detail-right">
+            <p class="project-detail-title">
+              Auto Shopping Cart (Only for iHurb)
+            </p>
+            <p class="project-detail-content">
+              We get all of some user's buy lists for iHurb<br>
+              When a user signs up for this website<br>
+              Then we will put the item in the shopping cart<br>
+              and push notification as a collaborative filtering algorithm<br>
+            </p>
+            <img class="bogo" src="./asset/bogo.png">
+          </div>
+          <div class="project-detail-left">
+            <a href="https://youtu.be/pGK-B2jB2w8">https://youtu.be/pGK-B2jB2w8</a>
+            <p>Only Korean</p>
+            <div class="project-skill">
+              <p class="project-skill-title">API Server</p>
+              <p>Flask</p>
+              <p>Python</p><br>
+              <p class="project-skill-title">Web Server</p>
+              <p>JSP</p>
+              <p>Java</p>
+              <p>BootStrap</p>
+              <p>Tomcat Server</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="contentLeft">
+        <div class="title hello">Hello</div>
+        <div class="circle1 circle"></div>
+      </div>
+      <div class="contentRight">
+        <div class="title world">World!</div>
+        <div class="circle2 circle"></div>
+        <div class="project-detail">
+          <div class="project-detail-right">
+            <p class="project-detail-title">
+              Simple Weather & Todo app
+            </p>
+            <img class="weather" src="./asset/weather.png">
+          </div>
+          <div class="project-detail-left">
+            <a href="https://exp.host/@youngsung/Weather">https://exp.host/@youngsung/Weather</a>
+            <div class="project-skill">
+              <p>React native</p>
+              <p>Expo</p>
+              <p>Openweather API</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="contentLeft">
+        <div class="title hello">Hello</div>
+        <div class="circle1 circle"></div>
+      </div>
+      <div class="contentRight">
+        <div class="title world">World!</div>
+        <div class="circle2 circle"></div>
+        <div class="project-detail">
+          <div class="project-detail-right">
+            <p class="project-detail-title">Assemble</p>
+            <p class="project-detail-content">Side Project app for a Developer</p>
+            
+            <div class="assembleSkill">
+              <div class="assembleSkill-col">
+                <p class="assembleTitle">Backend</p>
+                <p class="assembleContent">
+                  Node.js & Express<br>
+                  AWS EC2<br>
+                  Nginx<br>
+                  Linux
+                </d>
+                <p class="assembleTitle">DB</p>
+                <p class="assembleContent">
+                  AWS RDBS<br>
+                  MySQL
+                </p>
+                <p class="assembleTitle">Auth</p>
+                <p class="assembleContent">
+                  AWS Amplify<br>
+                  AWS cognito<br>
+                  Github Auth
+                </p>
+                <p class="assembleTitle">Storage</p>
+                <p class="assembleContent">
+                  AWS S3<br>
+                  Firebase Storage<br>
+                </p>
+              </div>
+
+              <div class="assembleSkill-col">
+                <p class="assembleTitle">Web</p>
+                <p class="assembleContent">
+                  REST API<br>
+                  GraphQL<br>
+                  letsendcrypt(SSL)<br>
+                  Freenom(Domain)
+                </d>
+                <p class="assembleTitle">UI&UX</p>
+                <p class="assembleContent">
+                  expo<br>
+                  expo cli<br>
+                  expo dev tool<br>
+                  expo debugging tool<br>
+                  Javascript<br>
+                  Typescript<br>
+                  react & react native<br>
+                  Bootstrap<br>
+                  HTML<br>
+                  CSS<br>
+                </p>
+                <p class="assembleTitle">Editor</p>
+                <p class="assembleContent">
+                  DBever<br>
+                  VScode<br>
+                  Figma<br>
+                  Illustration<br>
+                  Photo shop<br>
+                </p>
+              </div>
+
+              <div class="assembleSkill-col">
+                <p class="assembleTitle">API</p>
+                <p class="assembleContent">
+                  expo push<br>
+                  Firebase Realtime<br>
+                  pusher(X)<br>
+                  (Not enough test message for a day)<br><br>
+                  sendbird(X)<br>
+                  (Not enough API document & e.g.)<br>
+                  Python<br>
+                  (Web crawling for data)<br>
+                </p>
+                <p class="assembleTitle">Project</p>
+                <p class="assembleContent">
+                  npm<br>
+                  yarn<br>
+                  github&git
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+<script>
+  let currentX = ''
+  let currentY = ''
+  let scrollIndex = 0
+  let animatedId = null
+  let intervalList = []
+  const changeWidth = (width) => {
+    const contentsRight = document.getElementsByClassName('contentRight')
+    const contentsLeft = document.getElementsByClassName('contentLeft')
+    clearInterval()
+    Object.keys(contentsRight).forEach(key => {
+      for (let min = 0; min <= width; min++) {
+        contentsLeft[key].style.width = (width - limit)  + '%'
+        contentsRight[key].style.width = ((100 - width) - limit)  + '%'
+      }
+    })
+  }
+  
+  const changePosition = (xdiff, ydiff, back) => {
+    let pastWidth = window.getComputedStyle(back).width.split('px')[0] * 0.000015
+    let backX = window.getComputedStyle(back)['background-position-x'].split('px')[0]
+    let backY = window.getComputedStyle(back)['background-position-y'].split('px')[0]
+    let newX = Number(backX) + (xdiff * pastWidth);
+    let newY = Number(backY) + (ydiff * pastWidth);
+    back.style['background-position-x'] = newX+'px'
+    back.style['background-position-y'] = newY+'px'
+  }
+  const clearIntervals = () => { 
+    intervalList.forEach(id => clearInterval(id))
+  }
+  const target = document.querySelector('html')
+  target.addEventListener('wheel', event => {
+    const contentsRight = document.getElementsByClassName('contentRight')
+    const contentsLeft = document.getElementsByClassName('contentLeft')
+    const isScollToBottom = event.deltaY > 0
+    let min = 20
+
+    if(scrollIndex == 0 && isScollToBottom){
+      clearIntervals()
+      let id = setInterval(()=> {
+        Object.keys(contentsRight).forEach(key => {
+          contentsLeft[key].style.width = (15 + min)  + '%'
+          contentsRight[key].style.width = (85 - min)  + '%'
+        })
+        if(min > 0) min--
+      }, 10)
+      intervalList.push(id)
+    }else if(scrollIndex == 1 && !isScollToBottom){
+      clearIntervals()
+      let id = setInterval(()=> {
+        Object.keys(contentsRight).forEach(key => {
+          contentsLeft[key].style.width = (40 - min)  + '%'
+          contentsRight[key].style.width = (60 + min)  + '%'
+        })
+        if(min > 0) min--
+      }, 10)
+      intervalList.push(id)
+    }
+
+    scrollIndex = scrollIndex + (isScollToBottom ? 1 : -1)
+    if(scrollIndex < 0)
+      scrollIndex = 0
+    else if(scrollIndex > 4)
+      scrollIndex = 4
+
+    target.scrollTo({behavior:"smooth", top: window.innerHeight * scrollIndex})
+  })
+
+  document.addEventListener("mousemove", (e) => {
+    if (currentX == '') currentX = e.pageX;
+    let xdiff = e.pageX - currentX;
+    currentX = e.pageX;
+    if (currentY == '') currentY = e.pageY;
+    let ydiff = e.pageY - currentY;
+    currentY = e.pageY;
+    changePosition(xdiff, ydiff, document.getElementsByClassName('back1')[0])
+    changePosition(xdiff, ydiff, document.getElementsByClassName('back2')[0])
+  })
+</script>
+</html>
