@@ -1,9 +1,8 @@
 # Site settings
 title: Learn from the past and discover from the future. # site title
-description: 
-   Change the world with a code line🌎
+description: Change the world with a code line🌎
 lang: en-US # default lang
-timezone: 
+timezone:
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
 repo: https://github.com/yeoung004 # site repo [optional]
 mode: light # default theme "dark" | "light"
@@ -12,7 +11,7 @@ mode: light # default theme "dark" | "light"
 # Profile settings
 author:
   name: Youngsung Choi # author name
-  bio:  Change the world with a code line🌎
+  bio: Change the world with a code line🌎
   username: YoungSung # general username
   github: yeoung004 # github username
   email: yeoung004@gmail.com # email adress
@@ -27,11 +26,11 @@ fb_appid:
 
 # Analytics
 analytics:
-  provider          : "google-gtage"
+  provider: "google"
   google:
-    tracking        : 
-    measurement_id  : "G-4G8RFCSKMF"
-    anonymize_ip    :
+    tracking: "G-4G8RFCSKMF"
+    measurement_id:
+    anonymize_ip:
 
 #category
 category_dir: category/
