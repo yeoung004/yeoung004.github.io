@@ -49,7 +49,7 @@ Most full text search engines provide a built-in list of stop words for the supp
 
 `SELECT * FROM information_schema.INNODB_FT_DEFAULT_STOPWORD;`
 This will show the default stop words used by InnoDB full-text search. You can also add or remove stop words from this table if you want to customize the stop words list. Keep in mind that you need the SUPER privilege to modify the stop words list.
-![stopword](stopword.png)
+![stopword](https://raw.githubusercontent.com/yeoung004/yeoung004.github.io/main/_posts/SQL/stopword.png)
 
 ### Token size
 
@@ -67,15 +67,15 @@ this is how to change token size in AWS rds:
 
 1. Go to the RDS dashboard in the AWS Management Console and select your database instance and Parameter groups.
 2. Click "Create parameter group" (You can't modify default parameter group).
-   ![rds1](rds1.png)
+   ![rds1](https://raw.githubusercontent.com/yeoung004/yeoung004.github.io/main/_posts/SQL/rds1.png)
 3. Write name of parameter group and click create button.
-   ![rds2](rds2.png)
+   ![rds2](https://raw.githubusercontent.com/yeoung004/yeoung004.github.io/main/_posts/SQL/rds2.png)
 4. Click on it to open the parameter group configuration page.
    On the parameter group configuration page, search for the innodb_ft_min_token_size parameter and modify its value to your desired ft_min_word_length (in bytes). Note that the innodb_ft_max_token_size parameter can also be modified to set the maximum length of indexed words.
-   ![rds5](rds5.png)
+   ![rds5](https://raw.githubusercontent.com/yeoung004/yeoung004.github.io/main/_posts/SQL/rds5.png)
 5. Finally, go back to the RDS dashboard and select your database instance again. Under the "Instance actions" menu, select "Modify" and select the updated parameter group from the "DB parameter group" dropdown. Follow the prompts to apply the changes to your database instance.
-   ![rds3](rds3.png)
-   ![rds4](rds4.png)
+   ![rds3](https://raw.githubusercontent.com/yeoung004/yeoung004.github.io/main/_posts/SQL/rds3.png)
+   ![rds4](https://raw.githubusercontent.com/yeoung004/yeoung004.github.io/main/_posts/SQL/rds4.png)
 
 ### Conclusion
 
