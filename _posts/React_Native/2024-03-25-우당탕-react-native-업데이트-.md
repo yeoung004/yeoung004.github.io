@@ -3,13 +3,13 @@
 
 또한 다양한 그래프(막대, 선, 삼각형, 도넛)들을 통해 서비스를 운영하면서 쌓인 데이터들을 가공해 유저한테 보일수 있도록 많은 시각화가 이뤄졌습니다
 
-![도넛그래프](./doughnut.png){: width="300"}
+![도넛그래프](https://github.com/yeoung004/yeoung004.github.io/blob/main/_posts/React_Native/doughnut.png?raw=true){: width="300"}
 도넛그래프
 
-![라인그래프](./lineGraph.png){: width="300"}
+![라인그래프](https://github.com/yeoung004/yeoung004.github.io/blob/main/_posts/React_Native/lineGraph.png?raw=true){: width="300"}
 라인그래프
 
-![도형그래프](./shapeGraph.png){: width="300"}
+![도형그래프](https://github.com/yeoung004/yeoung004.github.io/blob/main/_posts/React_Native/shapeGraph.png?raw=true){: width="300"}
 도형그래프
 
 처음 스크루지 26 업그레이드 기획안을 만들때 기획자분과 같이 React Native third party에서 제공하는 라이브러리가 존재하는지 또, 혼자서 만들수 있는 기능인지 찾아보고 또 사용법을 익히는데 시간이 많이 들었는데요
@@ -19,12 +19,12 @@
 다행히 안드로이드 진영에서 삼성에서 제공하는 기능을 찾아 실제 기기를 remote로 테스트 할 수 있었습니다.
 (다양한 삼성 기기를 제공하며 하루에 10개의 Credit을 공짜로 주는데 기기 사용을 위해 30분마다 2개가 필요 합니다.)
 https://developer.samsung.com/
-![삼성테스트](./samsung_test_lab.png){: width="500"}
+![삼성테스트](https://github.com/yeoung004/yeoung004.github.io/blob/main/_posts/React_Native/samsung_test_lab.png?raw=true){: width="500"}
 
 그리고 애플은 mac에서 사용할수 있는 시뮬레이터를 이용해 테스트를 진행했고요
 
 (Mac OS iPhone Simulator)
-![애플시뮬레이터](./simulator.png){: height="500"}
+![애플시뮬레이터](https://github.com/yeoung004/yeoung004.github.io/blob/main/_posts/React_Native/simulator.png?raw=true){: height="500"}
 
 하.지.만. 늘 그렇듯이 문제는 불현듯이 발생을 합니다….🥲
 
@@ -44,7 +44,7 @@ https://developer.samsung.com/
 
 사용된 기술은 react-native-gesture-handler 라이브러리를 사용해서 사용자의 터치 시작지점부터 터치가 끝난 지점까지 y좌표 값이 얼마나 차이가 나는지에 따라 업 스크롤링, 다운 스크롤링을 구분하였고 react-native-reanimated을 통해 애니메이션 및 동작을 핸들링 했습니다.
 
-![애플시뮬레이터](./bottomSheet.gif){: width="300"}
+![애플시뮬레이터](https://github.com/yeoung004/yeoung004.github.io/blob/main/_posts/React_Native/bottomSheet.gif?raw=true){: width="300"}
 
 
 다 만들고 나니 생각보다 잘 만들어진거 같아 혼자만 쓰기 아깝다는 생각이 났습니다.
