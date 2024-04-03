@@ -94,3 +94,26 @@ test('객체의 키, 값 검사', () => {
   expect(test).toHaveProperty('test1', 1);
 });
 ```
+
+#### toHaveLength, toContain
+##### 배열 길이, 배열 요소가 있는지 검사
+```js
+test('배열 관련', () => {
+  const animals = ['lion', 'cat', 'dog', 'elephant', 'giraffe'];
+  expect(animals).toHaveLength(5);
+  expect(animals).toContain('dog');
+});
+```
+#### toThrow
+##### throw가 실행 됐는지 검사
+```js
+function compileAndroidCode(os) {
+  if(os !== 'android')
+  throw new Error('you are using the wrong os');
+}
+
+test('예외 처리', () => {
+  // param의 값과 error 메세지가 일치하는 지도 체크
+  expect(() => compileAndroidCode('ios')).toThrow('you are using the wrong os');
+});
+```
