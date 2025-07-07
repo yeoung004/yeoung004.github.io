@@ -91,6 +91,8 @@ exclude:
   - lighthouse.png
   - klise-*.gem
   - klise.gemspec
+  - "**/*.assets"
+  - "**/*.assets/**"
 
 # Plugins
 plugins:
