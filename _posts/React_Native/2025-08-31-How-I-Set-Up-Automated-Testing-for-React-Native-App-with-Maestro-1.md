@@ -1,6 +1,14 @@
 # How I Set Up Automated Testing for a React Native App with Maestro
 
-> Everyone in my company knew that automated testing could save us a lot of time and headaches. The problem was that setting it up and writing scripts for every scenario always felt time-consuming and overwhelming. But this time, we finally decided to do it — because testing the same parts over and over again before every build and release was just wasting too much time.
+---
+#### How I Set Up Automated Testing for a React Native App with Maestro
+
+1. [Part 1 – Why I Chose Maestro and How I Got Started](https://yeoung004.github.io/How-I-Set-Up-Automated-Testing-for-React-Native-App-with-Maestro-1/)  
+2. [Part 2 – Setting Up Tests on macOS Runners](https://yeoung004.github.io/How-I-Set-Up-Automated-Testing-for-React-Native-App-with-Maestro-2/)  
+3. [Part 3 – Reporting, Collaboration, and Lessons Learned](https://yeoung004.github.io/How-I-Set-Up-Automated-Testing-for-React-Native-App-with-Maestro-final/)
+---
+
+ Everyone in my company knew that automated testing could save us a lot of time and headaches. The problem was that setting it up and writing scripts for every scenario always felt time-consuming and overwhelming. But this time, we finally decided to do it — because testing the same parts over and over again before every build and release was just wasting too much time.
 
 ---
 

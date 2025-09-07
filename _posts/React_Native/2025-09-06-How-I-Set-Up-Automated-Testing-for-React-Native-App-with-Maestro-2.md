@@ -1,4 +1,12 @@
-# How I Set Up Automated Testing for a React Native App with Maestro 2
+# Setting Up Tests on macOS Runners
+
+---
+#### How I Set Up Automated Testing for a React Native App with Maestro
+
+1. [Part 1 – Why I Chose Maestro and How I Got Started](https://yeoung004.github.io/How-I-Set-Up-Automated-Testing-for-React-Native-App-with-Maestro-1/)  
+2. [Part 2 – Setting Up Tests on macOS Runners](https://yeoung004.github.io/How-I-Set-Up-Automated-Testing-for-React-Native-App-with-Maestro-2/)  
+3. [Part 3 – Reporting, Collaboration, and Lessons Learned](https://yeoung004.github.io/How-I-Set-Up-Automated-Testing-for-React-Native-App-with-Maestro-final/)
+---
 
 In my previous post, I explained why I chose Maestro for automated testing. This time, I’ll walk you through how I set up the tests.
 

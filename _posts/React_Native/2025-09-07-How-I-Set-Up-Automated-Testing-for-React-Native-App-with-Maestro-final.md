@@ -1,4 +1,13 @@
-# How I Set Up Automated Testing for a React Native App with Maestro 3
+# Reporting, Collaboration, and Lessons Learned
+
+---
+#### How I Set Up Automated Testing for a React Native App with Maestro
+
+1. [Part 1 – Why I Chose Maestro and How I Got Started](https://yeoung004.github.io/How-I-Set-Up-Automated-Testing-for-React-Native-App-with-Maestro-1/)  
+2. [Part 2 – Setting Up Tests on macOS Runners](https://yeoung004.github.io/How-I-Set-Up-Automated-Testing-for-React-Native-App-with-Maestro-2/)  
+3. [Part 3 – Reporting, Collaboration, and Lessons Learned](https://yeoung004.github.io/How-I-Set-Up-Automated-Testing-for-React-Native-App-with-Maestro-final/)
+---
+
 
 In the first two posts, I explained why we chose Maestro and how I set up the test environments for both Android and iOS. In this final part, I’ll show how I built the **reporting and collaboration system** around Maestro tests, how it fits into our daily workflow, and what I learned through the process.
 
